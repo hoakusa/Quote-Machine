@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Random Quote Machine</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+  <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:700,800|Catamaran:200,300,500|Rock+Salt">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- meta description -->
+  <meta name="author" content="An Pham">
+  <meta name="robots" content="index,follow" />
+  
+  <meta name="description" content="Random Quote Machine">
+  <meta name="contact" content="hoakusa@gmail.com">
+  <meta name="copyright" content="An Pham">
+
+</head>
+<body ng-app="app" ng-controller="MainController">
+
+    <div class="loader">
+        <div class="spiner"></div>
+    </div>
+    
+    <div class="banner" ng-style="{'background-color':color}">
+    
+        <div class="banner-img">
+            <img ng-src="{{quote.img}}" />
+        </div>
+        
+        <center>
+            <section class="container">      
+            <p class="author">- {{quote.name}} -</p>
+            <blockquote>
+                <p>
+                {{quote.text}}
+            </p>
+            </blockquote>  
+            </section>
+        </center>
+        <footer>
+            <div>
+            <a class="btn-change animated-arrow" ng-click='changeQuote()'>
+                <span class="the-arrow left"><span class="shaft"></span></span>
+                <span class="main">
+                    <span class="text">Create new quote</span>
+                    <span class="the-arrow right"><span class="shaft"></span></span>
+                </span>
+                </a>
+            </div>
+
+            <div>
+            <a class="btn-change animated-arrow" ng-click='tweet()'>
+                <span class="the-arrow left"><span class="shaft"></span></span>
+                <span class="main">
+                    <span class="text">Tweet out<i class="ion-social-twitter"></i></span>
+                    <span class="the-arrow right"><span class="shaft"></span></span>
+                </span>
+                </a>
+            </div>
+        </footer>
+        
+        <div id="container">
+            <canvas id="pixie"></canvas>
+        </div>
+    
+    </div>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script> 
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+   
+
+</body>
+</html>
